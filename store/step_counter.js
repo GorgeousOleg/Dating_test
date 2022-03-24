@@ -3,7 +3,7 @@ export const state = () => ({
 })
 export const mutations = {
     next_step (state) {
-        state.curr_step +=5
+        state.curr_step++
     },
     few_steps: (state, i) => {
         state.curr_step += 10

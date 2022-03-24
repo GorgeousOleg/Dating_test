@@ -1,13 +1,8 @@
 <template>
   <div>
-    <h1> Шаг: {{step}} 
-    <button @click="next">Click</button>
-    </h1>
-    <div>
-      <h1>Data:         
-        {{$store.state.profiles.profiles}}
-      </h1>
-    </div>
+        <!-- {{$store.state.profiles.profiles}} -->
+        <!-- <Form/> -->
+        <Background/>        
   </div>
 </template>
 
@@ -32,7 +27,6 @@ export default {
     },
   }, 
   mounted(){
-  this.$store.commit('step_counter/few_steps')
   this.$store.dispatch('profiles/GET')      
   }, 
 }

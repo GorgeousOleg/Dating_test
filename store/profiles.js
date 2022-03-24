@@ -20,7 +20,7 @@ export const mutations = {
 }
 export const actions = {
     async GET ({ commit }) {
-        const id = await this.$axios.$get('https://dev.rusdat.net/api/test/profiles')
+        const id = await this.$axios.$get('https://evilinsult.com/generate_insult.php?lang=en&type=json')
         //https://evilinsult.com/generate_insult.php?lang=en&type=json
         commit('SET_PROFILE', id)
       }

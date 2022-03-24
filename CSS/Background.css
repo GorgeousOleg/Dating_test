@@ -1,0 +1,67 @@
+
+body{
+    position: relative;
+}
+.background{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    display: flex;   
+    justify-content:center; 
+
+    width: 1440px;
+    height: 1024px;    
+    z-index: 10;
+    background-color: #E3B5A4;
+}
+.LD{
+    position: absolute;
+    width: 386px;
+    height: 653px;
+    left: 19px;
+    top: 323px;
+    z-index: 20;
+}
+.LU{
+    position: absolute;
+    width: 385px;
+    height: 262px;
+    left: 20px;
+    top: 47px;
+    z-index: 20;    
+}
+.MD{
+    position: absolute;
+    width: 590px;
+    height: 357px;
+    left: 425px;
+    top: 619px;
+    z-index: 20;
+}
+.MU{
+    position: absolute;
+    width: 590px;
+    height: 552px;
+    left: 425px;
+    top: 47px;
+    z-index: 20;
+}
+.RD{
+    position: absolute;
+    width: 386px;
+    height: 541px;
+    left: 1035px;
+    top: 441px;
+    z-index: 20;
+}
+.RU{
+    position: absolute;
+    width: 386px;
+    height: 374px;
+    left: 1035px;
+    top: 47px;
+    z-index: 20;
+}
