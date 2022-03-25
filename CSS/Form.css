@@ -133,3 +133,109 @@ hr{
     border: 1px solid #773344;
     color: #773344;
 }
+.input_text{    
+    padding-left: 20px;
+    margin-bottom: 15px;
+    width: 385px;
+    height: 54px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+.input_text::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 50%;
+}
+.input_checkbox{
+    position: absolute;
+    margin: 0;
+    padding-left: 20px;
+    width: 385px;
+    height: 54px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+.triangle{
+    margin-right: 120px;
+    margin-top: 25px;
+    float: right;
+    width: 0; 
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #000000;
+    opacity: 50%;
+    }
+
+
+/*****
+- MultiSelect 
+*****/
+
+.dropdown { 
+position: relative; 
+cursor: pointer;
+margin: 0;
+    width: 385px;
+    height: 54px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.multiselect {
+position: relative;
+}
+
+ul {
+border: 1px solid #ddd;
+border-top: 0;
+border-radius: 0 0 3px 3px;
+left: 0px;
+padding: 8px 8px;
+position: absolute;
+top: -1rem;
+width: 100%;
+list-style: none;
+max-height: 150px;
+overflow: auto;
+}
+
+.overselect {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+}

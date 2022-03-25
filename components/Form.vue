@@ -37,7 +37,7 @@
                     <button class="buttonN">нет</button>
                 </div>            
             </div>
-            <div v-if="$store.state.step_counter.curr_step==5">            
+            <div v-else-if="$store.state.step_counter.curr_step==5">            
                 <h1>Поздравляем!</h1>
                 <p>Мы тщательно подходим к подбору девушек<br> 
                 и все они проверены нашим модератором </p>
@@ -58,11 +58,83 @@
                 <h2>Вы согласны с этим?</h2>
                 <button class="buttonNEXT" v-on:click="$store.commit('step_counter/next_step')">я согласен</button>              
             </div>
+            <div v-else-if="$store.state.step_counter.curr_step==6">
+                <h1>Заполните форму:</h1>
+                <input type="text" class="input_text" placeholder="Введите имя" name="name">
+                <input type="text" class="input_text" placeholder="E-mail" name="name">
+                <input type="text" class="input_text" placeholder="Введите возраст" name="name">
+                <!-- <div>
+                <input type="text" class="input_checkbox" placeholder="Какого возраста хотите найти девушку?" disabled>
+                <button class="triangle"  @click="$store.commit('step_counter/open_checkbox')"></button>            
+                </div> -->
+                <div class="dropdown-check-list" tabindex="100">                    
+                </div>
+                <div class="o-container">
+                            <div class="o-row o-flex u-mt2">
+                            <div class="col">                                
+                                <!-- <multi-select :options="options" @checked="onCheck"></multi-select> -->
+                            </div>
+                            <!-- <div class="col"><pre>{{ selected }}</pre></div> -->
+                            </div>
+                        </div>
+                        <div>
+                            <div class="dropdown" @click="showDropdown">
+                            <!-- <div class="overselect"></div> -->
+                            <!-- <select class="c-form-input">
+                                <option value="">Please Select One</option>
+                            </select> -->
+                            </div>
+                            <div class="multiselect" v-if="show">
+                            <ul>
+                                <li class="input_checkbox" v-for="(option, index) in options" :key="index">
+                                <input type="checkbox" :id="index" :value="option.value" v-model="selected">
+                                <label :for="index">{{ option.text }}</label>
+                                </li>
+                            </ul>
+                            </div>
+                        </div>
+
+            </div>
         </div>
 </template>
 
-
-
+<script>
+export default {
+    data() {
+    return {
+        show: false,
+        selected: [],
+        options: [
+        {
+            text: 'Uno',
+            value: 1
+        },
+        {
+            text: 'Dos',
+            value: 'dos'
+        },
+        {
+            text: 'Tres',
+            value: 'Tres'
+        }
+        ]
+    }
+  },
+    methods: {
+        showDropdown() {
+        this.show = !this.show
+        },
+        onCheck(val) {
+        this.selected = val;
+        }
+  },
+  watch: {
+        selected(val) {
+        this.$emit('checked', val)
+        }
+    }
+}
+</script>
 <style>
     @import url("../CSS/Form.css");
 </style>
