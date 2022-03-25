@@ -2,7 +2,7 @@
   <div>
         <!-- {{$store.state.profiles.profiles}} -->
         <!-- <Form/> -->
-        <Background/>        
+        <client-only><Background/></client-only>       
   </div>
 </template>
 
@@ -17,17 +17,17 @@ export default {
     }
   },
   computed: {
-    step() {  
-      return this.$store.state.step_counter.curr_step
-    }    
+    // step() {  
+    //   return this.$store.state.step_counter.curr_step
+    // }    
   },
   methods:{
-    next(){
-      this.$store.commit('step_counter/next_step')
-    },
+    // next(){
+    //   this.$store.commit('step_counter/next_step')
+    // },
   }, 
   mounted(){
-  this.$store.dispatch('profiles/GET')      
+  // this.$store.dispatch('profiles/GET')      
   }, 
 }
 </script>
